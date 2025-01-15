@@ -1,2 +1,5 @@
 /.gradle/
 /.idea/
+/build/
+/simpleDemo/src/main/AndroidManifest.xml
+/simpleDemo/src/main/assets
