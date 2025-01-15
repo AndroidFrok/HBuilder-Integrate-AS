@@ -11,13 +11,13 @@
         <activity
             android:name="io.dcloud.PandoraEntry"
             android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+            android:exported="true"
+            android:hardwareAccelerated="true"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:hardwareAccelerated="true"
-            android:theme="@style/TranslucentTheme"
             android:screenOrientation="user"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize" >
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -25,24 +25,26 @@
         </activity>
         <activity
             android:name="io.dcloud.PandoraEntryActivity"
-            android:launchMode="singleTask"
             android:configChanges="orientation|keyboardHidden|screenSize|mcc|mnc|fontScale|keyboard|smallestScreenSize|screenLayout|screenSize|uiMode"
+            android:exported="true"
             android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
             android:permission="com.miui.securitycenter.permission.AppPermissionsEditor"
             android:screenOrientation="user"
             android:theme="@style/DCloudTheme"
-            android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <action android:name="android.intent.action.VIEW" />
                 <data android:scheme=" " />
             </intent-filter>
         </activity>
+        <!-- todo 提交版本库前必须清空 dcloud_appkey的值 -->
         <meta-data
             android:name="dcloud_appkey"
-            android:value="开发者需登录https://dev.dcloud.net.cn/申请签名" />
+            android:value="997e84c1a1c2e3a13386b832ec660ca2" />
     </application>
 
 </manifest>
